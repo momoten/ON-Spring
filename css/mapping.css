@@ -1,0 +1,464 @@
+@charset "UTF-8";
+
+body{
+  font-size:15px;
+  font-family: Helvetica Neue,Helvetica,YuGothic,Yu Gothic,'ヒラギノ角ゴ Pro W3',Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,"ＭＳＰゴシック",sans-serif
+}
+
+/* 一括で全ての要素の余白をゼロに指定 */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+/*フォントについて*/
+
+a:link {
+  font-size:14px;
+  color: #888;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #888;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #BBB;
+  text-decoration: none;
+}
+
+/* ---------------------------------------- レイアウトに関する指定 */
+
+
+#wrapper {
+  /*text-align: left;*/
+  margin: 0 auto;
+  hight: 100%;
+  width: 100%;
+}
+
+
+/*-----------------------------------幅が480pxになったらの表示*/
+
+@media only screen and (max-width: 480px) {
+  #menu{
+    display: none;
+  }
+  #menu li{
+    width: 100%;
+  }
+  #toggle{
+    margin:10px;
+    display: block;
+    position: relative;
+    width: 100%;
+    background: #FFFFFF;
+  }
+
+
+/*-------------------------------------------バーガーアイコン描画*/
+/*---------------------------------------------------ベース(外枠）*/
+  #toggle:before{
+    border: 10px #FFFFFF solid;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    width: 35px;
+    height: 25px;
+    margin-top: -10px;
+    background: #000000;
+  }
+/*---------------------------------------------------ベース（内側）*/
+  #toggle:after{
+    border: 1px #000000 solid;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 47%;
+    left: 8px;
+    width: 45px;
+    height: 45px;
+    margin-top: -10px;
+  }
+
+/*---------------------------------------------------ベース（内側:ライン）*/
+  #toggle a:before, #toggle a:after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 50px;
+    height: 6px;
+    background: #FFFFFF;
+  }
+
+/*---------------------------------------------------ベース（内側:ライン表示位置）*/
+  #toggle a:before{
+    margin-top: 5px;
+  }
+  #toggle a:after{
+    margin-top: 15px;
+  }
+
+  #toggle a{
+  display: block;
+  position: relative;
+  padding: 12px 0 10px;
+  border-bottom: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  }
+
+/*---------------------------------------------------メニューリスト1番目（×ボタン）*/
+  #headmid li:nth-child(1){
+  border: 1px #aaaaaa solid;
+  font-size:20px;
+  text-align: right;
+  padding-right:20px;
+  }
+/*---------------------------------------------------メニューリスト*/
+  #headmid li{
+  border: 1px #aaaaaa solid;
+  text-align: center;
+  }
+/*---------------------------------------------------メニューリスト（リンク範囲拡張）*/
+  #headmid li a{
+  display: block;
+  }
+  
+  
+/*------------------------------------------header3種類位置設定*/
+  #headerc{
+  width:100%;
+  clear: both;
+  margin-bottom:10px;
+  }
+  #headleft {
+    margin-top:10px;
+    margin-right:10px;
+    float: right;
+    width: 10%;
+  }
+  #headright {
+    margin-top:15px;
+    float: right;
+    width: 30%;
+  }
+  #toggle {
+    margin-bottom:30px;
+    position: relative;
+    float: left;
+    width: 40%;
+  }
+  #headmid{
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 100%;
+  }
+  #headerb{
+    display: none;
+  }
+  
+/*------------------------------------------map表示設定*/
+  #map {
+    border: 3px #000000 solid;
+    position: relative;
+    padding-bottom: 50%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+ 
+  #map iframe,
+  #map object,
+  #map embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+@media screen and (min-width: 479px){
+
+/*--------------------------------ハンバーガーメニュー描画*/
+#toggle{
+ display: block;
+  position: relative;
+  width: 33%;
+  background: #FFF;
+}
+
+#toggle a{
+  display: block;
+  position: relative;
+  padding: 12px 0 10px;
+  border-bottom: 1px solid #444;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+}
+#toggle{
+ display: none;
+}
+
+
+
+
+/*-----------------------------画面上部タイトル・メニュー*/
+
+#header {
+/*border: 1px #000000 solid;*/
+  content: "";
+  display: block;
+  clear: both;
+  margin:10px auto;
+  /*hight: 100%;*/
+  width: 80%;
+}
+
+#headera {
+/*border: 3px #FF00FF solid;*/
+  content: "";
+  display: block;
+  clear: both;
+  /*hight: 100%;*/
+  width: 100%;
+  margin: 0 auto;
+}
+
+#headleft {
+/*border: 1px #FF0000 solid;*/
+  float: left;
+  margin:0 auto;
+  padding-left: 6%;
+  /*hight: 100%;*/
+  width: 25%;
+}
+#headmid {
+/*border: 1px #FF0000 solid;*/
+  float: left;
+  margin:0 auto;
+  text-align: center;
+  width: 40%;
+}
+#headmid li{
+display:inline;
+list-style-type:none;
+margin-right:-1px;
+width: 19%;
+float: left;
+border-left: 1px solid #999;
+border-right: 1px solid #999;
+}
+#headmid li+li {
+border-left: 1px solid #999;
+}
+#headmid li:nth-child(1){
+display: none;
+}
+
+
+#headright {
+/*border: 1px #0000FF solid;*/
+  float: left;
+  text-align:right;
+  margin:0 auto;
+  padding-right: 0%;
+  /*hight: 100%;*/
+  width: 28%;
+}
+
+
+#headerc:after {
+  margin:50px auto;
+  content: "";
+  display: block;
+  clear: both;
+  margin:0 auto;
+  /*text-align: center;*/
+  /*hight: 50%;*/
+  width: 80%;
+}
+
+#headerc1 {
+/*border: 1px #FF0000 solid;*/
+  float: left;
+  text-align: center;
+  margin:0 auto;
+  /*hight: 100%;*/
+  width: 19%;
+}
+#headerc2 {
+/*border: 1px #00FF00 solid;*/
+  float: left;
+  text-align: center;
+  margin:0 auto;
+  /*hight: 100%;*/
+  width: 20%;
+}
+#headerc3 {
+/*border: 1px #0000FF solid;*/
+  float: left;
+  text-align: center;
+  margin:0 auto;
+  /*hight: 100%;*/
+  width: 20%;
+}
+#headerc4 {
+/*border: 1px #FFFF00 solid;*/
+  float: left;
+  text-align: center;
+  margin:0 auto;
+  /*hight: 100%;*/
+  width: 20%;
+}
+#headerc5 {
+/*border: 1px #FF00FF solid;*/
+  float: left;
+  text-align: center;
+  margin:0 auto;
+  /*hight: 100%;*/
+  width: 19%;
+}
+
+
+#headerb {
+/*border: 1px #FFFF00 solid;*/
+  margin:25px auto;
+  clear: both;
+  text-align: center;
+  hight: 100%;
+  width: 100%;
+}
+#headerb img {
+  margin:0 auto;
+  hight: auto;
+  max-width: 100%;
+}
+
+
+/*-----------------------------マップ表示部*/
+
+#map {
+border: 3px #000000 solid;
+position: relative;
+padding-bottom: 50%;
+padding-top: 30px;
+margin: 0 auto;
+width: 75%;
+height: 100%;
+overflow: hidden;
+}
+ 
+#map iframe,
+#map object,
+#map embed {
+position: absolute;
+top: 30px;
+left: 0;
+width: 75%;
+height: 100%;
+}
+
+
+}
+
+
+
+/*------------------------トップへ戻る*/
+
+#back {
+  text-align: right;
+  margin: 0 auto;
+  hight: 100%;
+  width: 75%;
+}
+
+
+
+
+@media screen and (min-width: 479px){
+
+/*------------------------体験名一覧表示*/
+
+#visitlist{
+  //border: 1px #000000 solid;
+  //float: left;
+  margin:50px auto;
+  text-align: left;
+  width: 65%;
+  vertical-align:middle;
+}
+#visitlist li{
+display:inline;
+list-style-type:none;
+margin: 10px auto;
+width: 50%;
+float: left;
+}
+
+#visitlist li a:link,
+#visitlist li a:visited,
+#visitlist li a:hover{
+  font-style: 'ヒラギノ角ゴ Pro W6',Hiragino Kaku Gothic Pro;
+  font-size:16px;
+  font-color:#000000;
+  vertical-align:middle;
+}
+
+}
+
+
+
+/*------------------------------------体験分類色用サークル描画*/
+
+#circle {
+	width: 20px;
+	height: 20px;
+	background-color: rgb(247,52,22);
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+#circle2 {
+	width: 20px;
+	height: 20px;
+	background-color: rgb(155,205,204);
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+#circle3 {
+	width: 20px;
+	height: 20px;
+	background-color: rgb(251,151,136);
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+#circle4 {
+	width: 20px;
+	height: 20px;
+	background-color: rgb(22,103,150);
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}
+#circle5 {
+	width: 20px;
+	height: 20px;
+	background-color: rgb(154,102,151);
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+}

@@ -1,0 +1,148 @@
+body{
+		color: #000;
+		background: #FFF;
+		font-family: 'ÉqÉâÉMÉmäpÉS Pro W3','Hiragino Kaku Gothic Pro','ÉÅÉCÉäÉI','Meiryo,'MS PÉSÉVÉbÉN',sans-serif;
+		line-height: 1.4em;
+		text-align: center;
+		word-wrap: break-word;
+	}
+	
+a  { color: #FF0000;}
+a:hover{ text-decoration: none;}
+
+#header,
+#contents,
+#footer{
+		width: 100%;
+		clear:both;
+		}
+		
+
+
+
+body,div,
+ul,ol,li,
+h1,h2,h3,
+p{
+	margin: 0;
+	padding:0;
+}
+
+ul,ol,li{
+			list-style: none;
+		}
+		
+img{
+		border:0;
+		vertical-align: text-bottom;
+	}
+	
+h1,h2,h3{
+			font-weight:normal;
+		}
+
+
+.corssfader{
+				position:relative;
+				height:430px;
+			}
+
+h1{
+	width: 300px;
+	float: left;
+	}
+	
+#gnav{
+		float: right;
+		width: 480px;
+		margin-top: 35px;
+		}
+		
+#gnav li{
+			width: 120px;
+			float: left;
+		}
+
+#contents{
+			background: #F1F1F1 url(../images/bg_grid_gray.gif)repeat;
+			padding-top: 30px;
+			border: 1px solid #EEE;
+			border-left: 0;
+			border-right: 0;
+		}
+		
+.inner{
+		width: 930px;
+		margin: 0 auto;
+		text-align: left;
+		overflow: hidden;
+		}
+.box-960{
+			width: 960px;
+		}
+
+
+
+.box_L{
+			width: 350px;
+			background: url(../images/box_footer_L.png) no-repeat bottom center;
+		}
+
+.box_S{
+			width: 350px;
+			background: url(../images/box_footer_S.png) no-repeat bottom center;
+			margin-bottom: 25px;
+			padding-bottom: 5px;
+		}
+		
+.box_CSS3{
+			float: left;
+			width: 350px;
+			box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.1);
+			margin-bottom: 30px;
+		}
+.box_inner{
+				background: #FFF;
+				padding: 10px;
+				min-height: 190px;
+				
+			}
+
+a:hover .box_inner{
+						background: url(../images/bg_grid_red.gif)repeat;
+					}
+
+
+.info{
+		height: 150px;
+		overflow: auto;
+		font-size: small;
+		}
+
+#footer{
+			padding: 20px 0;
+		}
+		
+#footer .logo_s{
+					float: left;
+				}
+#footer .nav{
+				float: right;
+				margin-top: 15px;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
